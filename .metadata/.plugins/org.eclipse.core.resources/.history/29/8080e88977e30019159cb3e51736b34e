@@ -1,0 +1,17 @@
+package com.clone;
+
+public class TestClone {
+
+	public static void main(String[] args) throws CloneNotSupportedException {
+
+		Department d = new Department(11, "Department");
+		Employee emp = new Employee(101, "Employee Name", d);
+		
+		Employee empCloned = (Employee) emp.clone();
+		
+//		empCloned.setId(d.);
+		
+		System.out.println(empCloned.getClass() == empCloned.getClass());
+	}
+
+}

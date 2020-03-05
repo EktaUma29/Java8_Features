@@ -1,0 +1,55 @@
+package com.practice;
+
+import java.io.IOException;
+
+class Checking {
+	
+	static {
+		System.out.println("Hi Static");
+	}
+	
+	
+	 {
+		System.out.println("static 2");
+	}
+	
+
+	public static void main(String[] args) throws Exception, IOException {
+
+		
+		
+		{
+			System.out.println("Hi init");
+		}
+		
+		
+
+	}
+
+	private void permutation(String str, int l, int r) {
+
+		Checking c = new Checking();
+
+		if (l == r) {
+			System.out.println(str);
+		} else {
+			for (int k = l; k <= r; k++) {
+
+				str = c.swap(str, l, k);
+				c.permutation(str, l + 1, r);
+			}
+		}
+	}
+
+	private String swap(String str, int i, int j) {
+
+		char temp; 
+		char[] charArray = str.toCharArray(); 
+		temp = charArray[i] ; 
+		charArray[i] = charArray[j]; 
+		charArray[j] = temp; 
+		return String.valueOf(charArray); 
+
+	}
+
+}

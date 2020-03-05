@@ -1,0 +1,17 @@
+package com.cyclic.dependency;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class BeanA {
+
+	 private final BeanB beanB;
+     public BeanA(BeanB b) {
+         this.beanB = b;
+     }
+	public void doSomething() {
+
+		System.out.println("BeanA do somthing!!!!");
+		
+	}
+}

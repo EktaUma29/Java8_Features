@@ -1,0 +1,21 @@
+package com.collection;
+
+import java.util.HashMap;
+
+public class CyclicString {
+
+	public static void main(String[] args) {
+
+		String str = "cabcabc";
+		
+		String str1[] = str.split("");
+		
+		HashMap<String, Integer>  map = new HashMap();
+		
+			System.out.println(123%2);
+
+			
+		
+	}
+
+}

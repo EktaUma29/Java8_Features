@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+  
+    
+    <bean id="Hello" class="com.spring.demo.hello.Hello" scope="singleton">
+		
+		<constructor-arg ref="B"></constructor-arg>
+		<property name="a" ref="A"></property>
+	</bean>
+	
+	  <bean id="A" class="com.spring.demo.hello.A" scope="singleton">
+		<!-- <property name="a" value="99"></property>
+		<property name="msg" value="Hello A"></property> -->
+	</bean>	
+
+    
+	
+	<bean id="B" class="com.spring.demo.hello.B" scope="singleton">
+		<!-- <constructor-arg value="88"></constructor-arg>
+		<constructor-arg value="Hello B"></constructor-arg> -->
+		<!-- <property name="bMethod" value="77"></property> -->
+	</bean>
+    
+   
+   
+
+	
+	
+
+
+
+
+
+
+</beans>

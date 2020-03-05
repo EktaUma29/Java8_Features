@@ -1,0 +1,39 @@
+package com.practice;
+
+public class CheckingMap {
+
+	public static void main(String[] args) {
+		
+		CheckingMap c = new CheckingMap();
+		Thread a1 = new Example(c);
+		Thread a2 = new Example(c);
+		a1.start();
+		a2.start();
+	}
+
+	private int count = 1;
+	
+	public synchronized void dosome() {
+		for(int i =0; i<10; i++) {
+			System.out.println(count++);
+		}
+	}
+}
+
+class Example extends Thread{
+	
+	CheckingMap demo;
+
+	public Example(CheckingMap demo) {
+		super();
+		this.demo = demo;
+	}
+	
+	public void run() {
+		
+		demo.dosome();
+	}
+	
+	
+}
+

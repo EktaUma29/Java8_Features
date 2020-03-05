@@ -1,0 +1,13 @@
+package com.bifunction;
+
+public class EmployeeData {
+
+	String name;
+	int eno;
+
+	public EmployeeData(String name, int eno) {
+		this.name = name;
+		this.eno = eno;
+	}
+
+}

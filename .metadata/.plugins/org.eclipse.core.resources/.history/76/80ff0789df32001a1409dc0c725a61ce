@@ -1,0 +1,46 @@
+package com.practice;
+
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+
+public class CheckingMap {
+
+	public static void main(String[] args) {
+
+		List<Integer> list = new ArrayList<Integer>();
+		
+//		list.add(10);
+//		list.add(10);
+//		list.add(20);
+//		list.add(20);
+//		list.add(5);
+//		list.add(30);
+//		list.add(4);
+//		list.add(20);
+//		list.add(60);
+//		list.add(60);
+		
+		Set<Integer> set = new LinkedHashSet<Integer>();
+
+		for (int i = 0; i < list.size() - 1; i++) {
+			
+			if (list.get(i) == list.get(i + 1))
+				list.remove(i);
+			
+			if (list.get(i) > list.get(i + 1)) {
+				set.add(list.get(i));
+				list.remove(i + 1);
+
+			} else {
+				set.add(list.get(i));
+				list.remove(i);
+			}
+		}
+		set.add(list.get(list.size() - 1));
+		List listNew = new ArrayList(set);
+		System.out.println(listNew);
+	}
+
+}

@@ -1,0 +1,39 @@
+package com.practice;
+
+class Checking {
+	
+	public static void main(String args[]) {
+		long[] a1 = {3, 4, 5};
+		long[] a2 = foo(a1);
+		
+		System.out.println(a1);
+		System.out.println(a2);
+		
+	}
+
+	private static long[] foo(long[] a1) {
+
+		a1[1] = 7;
+		
+		return a1;
+	}
+
+	
+}
+
+
+class Name{
+	
+	String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	
+}

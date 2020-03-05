@@ -1,0 +1,17 @@
+package com.bifunction;
+
+interface i{
+	public void m1();
+}
+
+public class EmployeeData {
+
+	String name;
+	int eno;
+
+	public EmployeeData(String name, int eno) {
+		this.name = name;
+		this.eno = eno;
+	}
+
+}

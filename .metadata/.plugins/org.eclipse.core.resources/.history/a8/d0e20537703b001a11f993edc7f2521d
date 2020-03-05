@@ -1,0 +1,11 @@
+package com.cyclic.dependency;
+
+import com.cyclic.dependency.ExampleMain.BeanB;
+
+public class BeanA {
+
+	 private final BeanB beanB;
+     public BeanA(BeanB b) {
+         this.beanB = b;
+     }
+}

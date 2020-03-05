@@ -1,0 +1,28 @@
+package com.collection;
+
+import java.util.HashMap;
+
+public class CyclicString {
+
+	public static void main(String[] args) {
+
+		System.out.println(check());
+
+	}
+
+	static String check() {
+		try {
+
+			int a = 5 / 0;
+			System.out.println("sysout try");
+			return "try";
+		} catch (Exception e) {
+			System.out.println("sysout Catch");
+			return "catch";
+		} finally {
+			System.out.println("sysout FInally");
+//			return "finally";
+		}
+	}
+
+}

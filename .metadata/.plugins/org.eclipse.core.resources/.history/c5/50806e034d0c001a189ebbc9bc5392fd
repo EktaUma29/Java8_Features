@@ -1,0 +1,33 @@
+package com.practice;
+
+import java.io.IOException;
+
+class Checking {
+	
+	private static String permutation(String str) {
+
+		try {
+			System.out.println("Hiiiii");
+			return "return";
+		}finally {
+			System.out.println("Finally");
+			return "finally return";
+		}
+	}
+
+	private String swap(String str, int i, int j) {
+
+		char temp; 
+		char[] charArray = str.toCharArray(); 
+		temp = charArray[i] ; 
+		charArray[i] = charArray[j]; 
+		charArray[j] = temp; 
+		return String.valueOf(charArray); 
+
+	}
+	
+	public static void main(String args[]) {
+		System.out.println(permutation("name"));
+	}
+
+}

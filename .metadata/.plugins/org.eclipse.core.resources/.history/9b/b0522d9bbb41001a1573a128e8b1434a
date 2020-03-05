@@ -1,0 +1,25 @@
+package com.collection;
+
+import java.util.HashMap;
+
+public class CyclicString {
+
+	public static void main(String[] args) {
+
+		String str = "GTCAG";
+		
+		StringBuffer st = new StringBuffer(str);
+		
+		String st1 = st.reverse().toString();
+		System.out.println(st1);
+		String str1[] = st1.split("");
+		for(int i =0; i<str1.length; i++) {
+			if(str1[0].equals("A") == true ) {
+				str1[0] = "T";
+			}
+				String comp = str1.toString();
+		}
+		
+	}
+
+}

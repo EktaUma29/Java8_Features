@@ -1,0 +1,3 @@
+com\api\spring\rest\controller\HelloController.class
+com\api\spring\rest\hello\Hello.class
+com\api\spring\rest\service\HelloService.class

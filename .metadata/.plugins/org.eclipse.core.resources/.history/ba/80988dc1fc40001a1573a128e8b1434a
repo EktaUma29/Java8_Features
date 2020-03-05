@@ -1,0 +1,19 @@
+package com.collection;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class FailSafeAndFailFast {
+
+	public static void main(String[] args) {
+
+		
+		List<Integer> list = new ArrayList();
+		list.add(10);
+		list.add(100);
+		list.add(1000);
+		list.add(1);
+		
+	}
+
+}

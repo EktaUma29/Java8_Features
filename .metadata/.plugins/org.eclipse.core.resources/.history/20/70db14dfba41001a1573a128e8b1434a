@@ -1,0 +1,18 @@
+package com.collection;
+
+import java.util.HashMap;
+
+public class CyclicString {
+
+	public static void main(String[] args) {
+
+		String str = "GTCAG";
+		
+		StringBuffer st = new StringBuffer(str);
+		
+		st = st.reverse();
+		System.out.println(st);
+		
+	}
+
+}

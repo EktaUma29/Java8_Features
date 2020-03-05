@@ -1,0 +1,29 @@
+package com.cone;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class ChOne {
+
+	public static void main(String[] args) {
+
+		List<String> topName = Arrays.asList(
+				"Aamelia",
+				"Olivia",
+				"emily",
+				"Isla",
+				"Ava",
+				"Oliver",
+				"Jack",
+				"Charlie",
+				"harry",
+				"jacob"
+				);
+	
+		topName.stream()
+		.map(name -> name.substring(0, 1).toUpperCase() + name.substring(1))
+		.sorted()
+		.forEach(System.out::println);
+	}
+
+}

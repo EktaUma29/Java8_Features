@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<context:property-placeholder location="classpath:sport.properties" />
+
+	<bean id="MyCoach" class="com.spring.demo.one.BaseBallCoach">
+		<constructor-arg ref="happyFortuneService"></constructor-arg>
+
+	</bean>
+
+	<bean id="CricketCoach" class="com.spring.demo.one.CricketCoach">
+		<property name="fortuneService" ref="happyFortuneService"></property>
+
+
+		<!-- <property name="emailAddress" value="ekta@gmail.com"></property> <property 
+			name="team" value="Sunrises Hyderabad Team"></property> -->
+
+
+		<property name="emailAddress" value="${foo.email}"></property>
+		<property name="team" value="${foo.team}"></property>
+
+
+	</bean>
+
+	<bean id="happyFortuneService" class="com.spring.demo.one.HappyFortuneService"></bean>
+
+	<bean id="myLoggerConfig" class="com.spring.demo.one.MyLoggerConfig"
+		init-method="initLogger">
+		<property name="rootLoggerLevel" value="FINE" />
+		<property name="printedLoggerLevel" value="FINE" />
+	</bean>
+
+
+	<bean id="randomFortuneService" class="com.spring.demo.one.RandomFortuneService">
+	</bean>
+
+	<bean id="golfCoach" class="com.spring.demo.one.GolfCoach">
+		<constructor-arg ref="randomFortuneService"></constructor-arg>
+	</bean>
+
+
+</beans>

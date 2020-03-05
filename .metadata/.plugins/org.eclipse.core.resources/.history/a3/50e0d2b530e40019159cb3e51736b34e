@@ -1,0 +1,67 @@
+package com.clone;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Employee implements Cloneable {
+
+	private int Id;
+	private String name;
+	private Department department;
+	private List<String> address;
+
+	public List<String> getAddress() {
+		return address;
+	}
+
+	public void setAddress(List<String> address) {
+		this.address = address;
+	}
+
+	public Employee(int id, String name, Department department, List<String> address) {
+		super();
+		Id = id;
+		this.name = name;
+		this.department = department;
+		this.address = address;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [Id=" + Id + ", name=" + name + ", department=" + department + ", address=" + address + "]";
+	}
+
+	public int getId() {
+		return Id;
+	}
+
+	public void setId(int id) {
+		Id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+
+		Employee cloned = (Employee) super.clone();
+		cloned.setAddress(new ArrayList(cloned.getAddress()));
+		cloned.setDepartment(new Department(cloned.getDepartment());
+
+		return cloned;
+	}
+}

@@ -1,0 +1,15 @@
+package com.cyclic.dependency;
+
+
+public class BeanA {
+
+	 private final BeanB beanB;
+     public BeanA(BeanB b) {
+         this.beanB = b;
+     }
+	public void doSomething() {
+
+		System.out.println("BeanA do somthing!!!!");
+		
+	}
+}

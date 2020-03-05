@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.yash.assignment.three.PermutationStrings&apos; to &apos;Permutation&apos;&#x0D;&#x0A;- Original project: &apos;core_rest_assignment&apos;&#x0D;&#x0A;- Original element: &apos;com.yash.assignment.three.PermutationStrings&apos;&#x0D;&#x0A;- Renamed element: &apos;com.yash.assignment.three.Permutation&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;PermutationStrings&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.yash.assignment.three{PermutationStrings.java[PermutationStrings" matchStrategy="1" name="Permutation" qualified="false" references="true" similarDeclarations="false" stamp="1571727322274" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,30 @@
+package core.java.question;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.TreeMap;
+
+public class Check {
+
+	public static void main(String[] args) {
+
+		byte a =10;
+		int c = 1;
+		int b = a + c;
+		System.out.println(a/4);
+		
+		try {
+			System.out.println("Try block");
+		}
+		catch(IOException e) {
+			System.out.println("Catch block");
+		}
+		finally {
+			System.out.println("Finally block");
+		}
+		
+		
+	}
+
+}

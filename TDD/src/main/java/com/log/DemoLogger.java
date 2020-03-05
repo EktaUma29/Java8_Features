@@ -1,0 +1,22 @@
+package com.log;
+
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+class DemoLogger {
+	
+	private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+
+	// Get the Logger from the log manager which corresponds
+	// to the given name <Logger.GLOBAL_LOGGER_NAME here>
+	// static so that it is linked to the class and not to
+	// a particular log instance because Log Manage is universal
+	public void makeSomeLog() {
+		// add some code of your choice here
+		// Moving to the logging part now
+		LOGGER.log(Level.INFO, "My first Log Message");
+
+		// A log of INFO level with the message "My First Log Message"
+	}
+}

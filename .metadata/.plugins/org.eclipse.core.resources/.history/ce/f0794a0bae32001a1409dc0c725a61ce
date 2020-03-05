@@ -1,0 +1,46 @@
+package com.practice;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class CheckingMap {
+
+	public static void main(String[] args) {
+		// Integer x = new Integer(1);
+		// Integer y = new Integer(2);
+		// CheckingMap c = new CheckingMap();
+		// System.out.println("before x: " + x + " y: " + y);
+		// modify(x, y);
+		// System.out.println("before x: " + x + " y: " + y);
+		//
+		// Set s = new TreeSet();
+		// s.add("Aron");
+		// s.add(1);
+		// while (s.iterator().hasNext()) {
+		// System.out.println(s.iterator().next());
+		// }
+		//
+
+		int arr[] = { 10, 20, 30, 30, 40, 50, 60 };
+
+		for (int i = 0; i < arr.length - 1; i++) {
+			if (arr[i] == arr[i + 1]) {
+				for (int j = i-2; j < arr.length-1; j++) {
+					arr[i+1] = arr[j];
+				}
+			}
+
+		}
+
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + ", ");
+		}
+	}
+
+	static void modify(int x, int y) {
+		x = 11;
+		y = 22;
+
+	}
+
+}

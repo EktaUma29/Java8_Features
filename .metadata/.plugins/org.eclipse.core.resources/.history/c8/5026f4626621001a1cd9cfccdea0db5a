@@ -1,0 +1,74 @@
+package com.yash.assignment.one;
+
+import com.yash.assignment.one.MyLinkedList.Node;
+
+class MyLinkedList {
+
+	public Node head;
+
+	public static class Node {
+
+		public Node next;
+
+		public int data;
+
+		public Node(int data) {
+			this.data = data;
+			next = null;
+		}
+	}
+}
+
+public class CountLoopLinkList {
+
+	public static int lengthOfLoop(MyLinkedList myLinkedList) {
+		Node head = myLinkedList.head;
+		Node slow = head;
+		Node fast = head;
+
+		boolean loop = false;
+
+		while (slow != null && fast != null && fast.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+
+			if (slow == fast) {
+				loop = true;
+				break;
+			}
+		}
+
+		if (loop) {
+
+			int length = 0;
+			slow = head;
+
+			while (fast != slow) {
+				fast = fast.next;
+				slow = slow.next;
+			}
+
+			do {
+				fast = fast.next;
+				length++;
+			} while (fast != slow);
+
+			return length;
+
+		}
+
+		return 0;
+	}
+	 public static void main (String[] args) { 
+	        Node head = new Node(1);  
+	    head.next = new  Node(2);  
+	    head.next.next = new  Node(3);  
+	    head.next.next.next = new Node(4);  
+	    head.next.next.next.next = new Node(5);  
+	  
+	    /* Create a loop for testing */
+	    head.next.next.next.next.next = head.next;  
+	  
+	    System.out.println( lengthOfLoop(head)); 
+}
+}

@@ -1,0 +1,62 @@
+package com.javacodegeeks.tdd.calculator;
+
+public class Calculator {
+
+	public Integer addition(String string) throws NegativesNotAllowed {
+		final int ZERO = 0;
+		int sum = 0;
+		int number;
+
+		if (string.isEmpty()) {
+			return 0;
+		} else {
+			String stringArray[] = string.split("[/\\n;,]+");
+			for(int i=0; i< stringArray.length ; i++){
+				if(stringArray.length == 1){
+					if(Integer.parseInt(stringArray[i])< 0){
+						throw new NegativesNotAllowed("Negatives Number Not Allowed");
+					}
+					return Integer.parseInt(stringArray[i]);s
+				}else if(Integer.parseInt(stringArray[i]) > 1 && Integer.parseInt(stringArray[i])< 0){
+					
+				}
+				else{
+					sum = sum + Integer.parseInt(stringArray[i]);
+				}
+			}
+		}
+
+		// String stringArray[] = string.split(",");
+
+
+		//			if (stringArray.length == 1) {
+		//				if (Integer.parseInt(stringArray[0]) < 0) {
+		//					throw new NegativesNotAllowed("Negatives Number Not Allowed");
+		//				} else {
+		//					return Integer.parseInt(stringArray[0]);
+		//				}
+		//			} else {
+		//				for (int num = 0; num < stringArray.length; num++) {
+		//
+		//					if (stringArray[num].isEmpty()) {
+		//						number = ZERO;
+		//					} else {
+		//						if (Integer.parseInt(stringArray[num]) < 0) {
+		//							throw new NegativesNotAllowed("Negatives Number Not Allowed");
+		//						} else if (Integer.parseInt(stringArray[num]) > 1000) {
+		//							number = ZERO;
+		//						} else {
+		//
+		//							number = Integer.parseInt(stringArray[num]);
+		//						}
+		//
+		//					}
+		//					sum = sum + number;
+		//				}
+		//				return sum;
+		//			}
+	}
+
+}
+
+}

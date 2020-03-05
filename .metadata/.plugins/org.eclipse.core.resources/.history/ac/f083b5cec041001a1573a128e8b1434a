@@ -1,0 +1,18 @@
+package com.collection;
+
+import java.util.HashMap;
+
+public class CyclicString {
+
+	public static void main(String[] args) {
+
+		System.out.println(check(4,6));
+	}
+	
+	
+	static int check(int n, long k) {
+		
+		return 0;
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.autowiring.Autowired.java&apos; to &apos;Address.java&apos;&#x0D;&#x0A;- Original project: &apos;spring-training&apos;&#x0D;&#x0A;- Original element: &apos;com.autowiring.Autowired.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.autowiring.Address.java&apos;" description="Rename compilation unit &apos;Autowired.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;com.autowiring{Autowired.java" name="Address.java" references="false" stamp="1579007889422" version="1.0"/>
+</session>

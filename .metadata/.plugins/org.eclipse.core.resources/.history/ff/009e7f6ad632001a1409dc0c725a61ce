@@ -1,0 +1,26 @@
+package com.practice;
+
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+public class CheckingMap {
+
+	public static void main(String[] args) {
+		
+		String str = "HACKE";
+		String str1 = "MONDAY"; // HMAOCNKDEARY;
+		int len = str.length() + str1.length();
+		String strNew = "";
+		
+		for(int i=0; i<len-1; i++) {
+			if(i%2 !=0) {
+				strNew = strNew + str.substring(i);
+			}
+			else {
+				strNew = strNew + str.substring(i);
+			}
+		}
+ 		System.out.println(strNew);
+	}
+
+}

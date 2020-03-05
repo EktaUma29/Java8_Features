@@ -1,0 +1,41 @@
+package com.practice;
+
+import java.util.HashSet;
+
+class Checking {
+	
+	public static void main(String args[]) {
+	
+		HashSet<Name> set = new HashSet<>();
+		Name name = new Name("yash");
+		set.add(name);
+		name.setName("yashtech");
+		System.out.println(set.contains(name));
+		
+		
+	}
+	
+}
+
+
+class Name{
+	
+	String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Name(String name) {
+		super();
+		this.name = name;
+	}
+	
+	
+	
+	
+}

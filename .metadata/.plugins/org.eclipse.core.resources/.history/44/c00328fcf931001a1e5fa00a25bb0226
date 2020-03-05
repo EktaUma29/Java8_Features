@@ -1,0 +1,21 @@
+package com.practice;
+
+public class CheckingMap {
+
+	public static void main(String[] args) {
+		int x = 1, y = 2;
+		CheckingMap c = new CheckingMap();
+		System.out.println("before x: " + x + " y: " + y);
+		modify(x,y);
+		System.out.println("before x: " + x + " y: " + y);
+		
+
+	}
+
+	static void modify(int x, int y) {
+		x=11;
+		y=22;
+		
+	}
+
+}

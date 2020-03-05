@@ -1,0 +1,79 @@
+package com.yash.employee.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
+@Table(name ="salary")
+public class Salary {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "salary_id")
+	private int salaryId;
+	
+	
+	@Column(name = "Salary")
+	private int salary;
+	
+	@JsonIgnore
+	@OneToOne(fetch = FetchType.EAGER,
+			optional = false)
+	@JoinColumn(mappedBy = "employee_id", nullable = false)
+    private Employee employee;
+
+	public Salary() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	public Salary(int salaryId, int salary) {
+		super();
+		this.salaryId = salaryId;
+		this.salary = salary;
+	}
+
+
+
+	public int getSalaryId() {
+		return salaryId;
+	}
+
+	public void setSalary_id(int salaryId) {
+		this.salaryId = salaryId;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+
+	
+	
+	
+
+}

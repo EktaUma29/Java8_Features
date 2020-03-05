@@ -1,0 +1,13 @@
+1565272878849	Move 'service' to 'java'
+1565273556680	Rename package 'controller'
+1565273566392	Rename package 'dao'
+1565273576588	Rename package 'model'
+1565273582979	Rename package 'service'
+1565274925847	Move 'views' to 'WEB-INF'
+1565275324427	Rename package 'com.controller'
+1565275338050	Rename package 'com.dao'
+1565275355102	Rename package 'com.model'
+1565275368173	Rename package 'com.service'
+1565332644852	Delete element
+1565332651581	Delete element
+1565332665070	Delete element

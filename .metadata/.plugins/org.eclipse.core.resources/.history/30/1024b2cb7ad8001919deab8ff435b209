@@ -1,0 +1,22 @@
+package com.bifunction;
+
+interface I{
+	public void m1(int i, int j, int k);
+}
+
+public class EmployeeData {
+
+	String name;
+	int eno;
+
+	public EmployeeData() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public EmployeeData(String name, int eno) {
+		this.name = name;
+		this.eno = eno;
+	}
+
+}

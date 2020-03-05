@@ -1,0 +1,13 @@
+package com.clone;
+
+public class Employee {
+
+	private int Id;
+	private String name;
+	private Department department;
+	
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

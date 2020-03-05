@@ -1,0 +1,22 @@
+package com.collection;
+
+import java.util.HashMap;
+
+public class CyclicString {
+
+	public static void main(String[] args) {
+
+		try {
+			args = null;
+			args[0] = "test";
+			System.out.println(args[0]);
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

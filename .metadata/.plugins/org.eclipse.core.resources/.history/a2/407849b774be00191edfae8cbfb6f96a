@@ -1,0 +1,5 @@
+package com.javacodegeeks.tdd.password.verify;
+
+public class PasswordCustomException {
+
+}

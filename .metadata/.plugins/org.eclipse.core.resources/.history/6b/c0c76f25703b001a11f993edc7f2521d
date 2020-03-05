@@ -1,0 +1,5 @@
+package com.cyclic.dependency;
+
+public class BeanA {
+
+}

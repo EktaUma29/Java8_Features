@@ -1,0 +1,26 @@
+package com.cyclic.dependency;
+
+@Configuration
+public class ExampleMain {
+
+    public static void main(String[] args) {
+        ApplicationContext context =
+                new AnnotationConfigApplicationContext(ExampleMain.class);
+    }
+
+    @Component
+    public static class BeanA {
+        private final BeanB beanB;
+        public BeanA(BeanB b) {
+            this.beanB = b;
+        }
+    }
+
+    @Component
+    public static class BeanB {
+        private final BeanA beanA;
+        public BeanB(BeanA beanA) {
+            this.beanA = beanA;
+        }
+    }
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;com.tea.coffee.main&apos; to &apos;tea-cofee-machine/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;tea-cofee-machine&apos;&#x0D;&#x0A;- Destination element: &apos;tea-cofee-machine/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;tea-cofee-machine/src/test/java/com.tea.coffee.main&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="/src\/main\/java" element1="/src\/test\/java&lt;com.tea.coffee.main" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1566889993631" version="1.0"/>
+</session>

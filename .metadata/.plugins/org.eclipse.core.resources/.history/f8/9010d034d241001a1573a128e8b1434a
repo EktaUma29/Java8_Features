@@ -1,0 +1,49 @@
+package com.collection;
+
+import java.util.HashMap;
+
+public class CyclicString {
+
+	public static void main(String[] args) {
+
+
+		
+		
+	}
+
+
+}
+
+class Ekta{
+	
+	int id;
+	String name;
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Ekta [id=" + id + ", name=" + name + "]";
+	}
+	public Ekta(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	
+	
+}

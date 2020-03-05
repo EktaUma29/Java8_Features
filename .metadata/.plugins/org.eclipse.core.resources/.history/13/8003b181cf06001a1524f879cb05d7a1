@@ -1,0 +1,16 @@
+package core.java.question;
+
+public class Check {
+
+	public static void main(String[] args) {
+		
+	}
+}
+class Point { 
+    protected int x, y; 
+   
+    public Point(int _x, int _y) { 
+        x = _x; 
+        y = _y; 
+    } 
+}

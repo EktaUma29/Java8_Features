@@ -1,0 +1,70 @@
+package com.practice;
+
+import java.util.HashSet;
+
+class Checking {
+
+	public static void main(String args[]) {
+
+		HashSet<Name> set = new HashSet<>();
+		Name name = new Name("yash");
+		set.add(name);
+		System.out.println(set);
+		name.setName("yashtech");
+		System.out.println(set);
+		System.out.println(set.contains(name));
+
+	}
+
+}
+
+class Name {
+
+	String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Name(String name) {
+		super();
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Name [name=" + name + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		System.out.println("inside hashcode");
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		System.out.println("inside equals");
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Name other = (Name) obj;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		return true;
+	}
+
+}

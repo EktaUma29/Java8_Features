@@ -1,0 +1,19 @@
+package com.streams;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class StreamMain {
+
+
+	public static void main(String[] args) {
+
+		ArrayList<String> bingoNumbers = Arrays.asList(
+				"N36", "N21", "N40",
+				"B12", "B10", "B30",
+				"G20", "G10", "G64", "g20", "G49",
+				"M2", "M9");
+		
+	}
+
+}

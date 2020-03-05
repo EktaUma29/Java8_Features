@@ -1,0 +1,38 @@
+package com.collection;
+
+import java.util.HashMap;
+
+public class CyclicString {
+
+	public static void main(String[] args) {
+
+		System.out.println(check(4,6));
+	}
+	
+	
+	static int check(int n, long k) {
+		
+		int sum = 0;
+		int total = 0;
+		int arr[] = new int[n];
+		for(int i = 0; i<n; i++) {
+			arr[i] = i+1;
+		}
+		
+		for(int i = 0; i<n; i++) {
+			
+			sum = sum + arr[i];
+			
+			if(sum!=k) {
+				if(sum<total) {
+					sum = total;
+				}
+			}
+			
+			
+		}
+		
+		return 0;
+	}
+
+}

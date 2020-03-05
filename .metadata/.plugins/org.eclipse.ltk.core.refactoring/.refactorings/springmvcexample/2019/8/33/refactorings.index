@@ -1,0 +1,5 @@
+1565595816709	Rename package 'com.howtodoinjava.demo.manager'
+1565596039027	Move 'spring-servlet.xml' to 'WEB-INF'
+1565596099310	Move 'index.jsp' to 'webapp'
+1565620354539	Rename type 'ControllerTest'
+1565620453421	Delete element
