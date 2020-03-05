@@ -17,7 +17,8 @@ import com.yash.helper.Levels;
 @Entity
 @DynamicUpdate
 @Table(name = "Interns")
-/* * Business Entity represents database table Interns */ @NamedQueries({
+/* * Business Entity represents database table Interns */ 
+@NamedQueries({
 		@NamedQuery(name = "findAllInterns", query = "from Interns I"),
 		@NamedQuery(name = "findInternById", query = "from Interns I where I.internId=:Id") })
 public class Interns implements Serializable {

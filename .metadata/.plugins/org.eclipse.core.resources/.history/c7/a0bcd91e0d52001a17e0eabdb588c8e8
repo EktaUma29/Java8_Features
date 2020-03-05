@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+function getData(){
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	     document.getElementById("p1").innerHTML = this.responseText;
+	    }
+	  };
+	  xhttp.open("GET", "ajax.txt", true);
+	  xhttp.send();
+}
+
+</script>
+</head>
+<body>
+<H1>Hello!!! WOrld.......</H1>
+
+<p id=p1></p>
+<form>
+
+<input type="button" name="button" value="Ok" onclick="getData()" />
+
+</form>
+</body>
+</html>

@@ -1,0 +1,7 @@
+package com.yash.service;
+
+import com.yash.model.JobsModel;
+
+public interface JobsService {
+	public List<JobsModel> retrieveJobs();
+}

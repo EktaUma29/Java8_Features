@@ -1,0 +1,16 @@
+package com.yash.service;
+
+import java.util.List;
+import com.yash.model.AllEmployeesModel; 
+import com.yash.model.EmployeesModel; 
+import com.yash.model.ManagersModel; 
+import com.yash.model.UpdatableEmployeesModel; 
+public interface EmployeesService { 
+	public List<EmployeesModel> retrieveEmployees();
+
+	public List<AllEmployeesModel> retrieveAllEmployees();
+
+	public EmployeesModel retrieveDepartmentName(int employeeId);
+
+	public String registerEmployee(AllEmployeesModel model);
+}

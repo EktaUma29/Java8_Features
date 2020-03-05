@@ -1,0 +1,28 @@
+<html x-ng-app= "MyApp">
+	
+	<head>
+		<script src = "angular.min.js"></script>
+		<script>
+				function controller1($scope, $rootScope){
+				$rootScope.lastName = "Sharma";
+				$sope.firstName= "Ekta";
+				}
+				
+				function controller2($scope, $rootScope){
+				$rootScope.lastName = "Birthare";
+				$sope.firstName= "A";
+				}
+				
+				var myApp = angular.module("MyApp", []);
+				myApp.controller("MyController1", controller1)
+				myApp.controller("MyController2", controller2)
+		</script>
+	</head>
+	
+	<div x-ng-controller = "MyController1">
+		<p> {{ firstName + lastName}} </p>
+	</div>
+	<div x-ng-controller = "MyController2">
+		<p> {{ firstName + lastName}} </p>
+	</div>
+</html>

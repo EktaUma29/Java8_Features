@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html x-ng-app="AjaxApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="angular.min.js"></script>
+<script>
+var ajaxApp=angular.module("AjaxApp",[]);
+
+ajaxApp.controller("AjaxController",function($scope,$http){
+	$scope.getServletData=function(){
+	$http(
+			{
+				url:'ajaxservlet',
+				method:"GET"
+			}
+	).then(
+			function(response){
+				$scope.datafromservlet=response.data;
+			},function(response){
+				$scope.datafromservlet=response;
+			}
+	
+	)
+	
+	}
+});
+
+</script>
+</head>
+<body x-ng-controller="AjaxController">
+<p>
+<input type ="text" value={{datafromservlet}}>
+</p>
+<form>
+<input type="submit" x-ng-click="getServletData()" value="Submit"/>
+</form>
+</body>
+</html>

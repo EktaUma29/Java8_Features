@@ -1,0 +1,5 @@
+package com.yash.integrate.copy;
+
+public class ConnectionManager {
+
+}

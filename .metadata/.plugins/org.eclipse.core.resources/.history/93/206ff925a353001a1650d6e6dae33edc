@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html x-ng-app="EmployeeApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="angular.min.js"></script>
+<script>
+var EmployeeApp=angular.module("EmployeeApp",[]);
+
+EmployeeApp.service('EmployeeService',function(){
+	this.total=function(employees){
+		
+		console.log(employees);
+		
+		var sum=0;
+		employees.forEach(e=>{
+			
+			sum=sum+e.empSalary;
+		})
+		
+		return sum;
+	}
+   this.average=function(employees){
+		
+		var sum=0;
+		var average=0;
+		employees.forEach(e=>{
+			
+			 sum=sum+e.empSalary;
+			
+		})
+		average=sum/employees.length;
+		return average;
+	}
+	
+});
+
+EmployeeApp.controller("EmployeeController",function($scope,$http,$log,EmployeeService){
+	
+	$scope.retrieveEmployeeData=function(){
+		
+
+		$http(
+		
+				{
+					url:'ajaxjsonservlet',
+					method:'GET'
+				}
+		).then(
+				
+		function(response){
+			$scope.employees=response.data;
+			$scope.flag=1;
+			$scope.totalresult=EmployeeService.total($scope.employees);
+			$scope.averageresult=EmployeeService.average($scope.employees);
+		},
+		function(response){
+			$scope.flag=0;
+			$log.error(response);
+		}
+		);
+		
+		
+		
+	}
+	
+	$scope.orderAttribute="empId";
+	
+	
+	
+	$scope.doOrdering=function(attribute){
+		$scope.orderAttribute=attribute;
+	}
+	
+});
+</script>
+</head>
+<body  x-ng-controller="EmployeeController" x-ng-onload="retrieveEmployeeData()">
+<table x-ng-show="flag==1">
+<tr style="background-color: gray;">
+<th x-ng-click="doOrdering('empId')">Emp Id</th><th x-ng-click="doOrdering('empName')">Emp Name</th><th x-ng-click="doOrdering('empSalary')">Emp Salary</th><th x-ng-click="doOrdering('empDesignation')">Emp Designation</th>
+</tr>
+<tr x-ng-repeat="employee in employees | orderBy:orderAttribute">
+<td x-ng-if="$even" style="background-color: #4C9900">{{employee.empId}}</td>
+<td x-ng-if="$odd" style="background-color: #B2FF66">{{employee.empId}}</td>
+
+
+<td x-ng-if="$even" style="background-color: #4C9900">{{employee.empName}}</td>
+<td x-ng-if="$odd" style="background-color: #B2FF66">{{employee.empName}}</td>
+
+<td x-ng-if="$even" style="background-color: #4C9900">{{employee.empSalary}}</td>
+<td x-ng-if="$odd" style="background-color: #B2FF66">{{employee.empSalary}}</td>
+
+<td x-ng-if="$even" style="background-color: #4C9900">{{employee.empDesignation}}</td>
+<td x-ng-if="$odd" style="background-color: #B2FF66">{{employee.empDesignation}}</td>
+
+</tr>
+
+</table>
+
+<br></br>
+<form>
+<input type="submit" x-ng-click="retrieveEmployeeData()" value="submit"/>
+</form>
+<div x-ng-show="flag==1">
+Total of Employees salary:{{totalresult}}<br></br>
+
+Average of Employees Salary:{{averageresult}}
+</div>
+</body>
+</html>

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,13 +21,13 @@ import com.yash.entity.Interns;
 import com.yash.service.InternsService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
-@RequestMapping("/interns-management")
+@CrossOrigin(origins = "file:///C:/Users/ekta.sharma/Desktop/AngularJS/EmployeeDB.html")
+//@RequestMapping("/interns-management")
 public class InternsController {
 	@Autowired
 	private InternsService internService;
 
-	@GetMapping("/yash-interns")
+	@GetMapping(value= "/yash-interns", produces= { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<List<Interns>> retrieveAllInterns() {
 		List<Interns> internsList = internService.retrieveInternsService();
 		ResponseEntity<List<Interns>> response = new ResponseEntity<List<Interns>>(internsList, HttpStatus.OK);

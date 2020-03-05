@@ -1,0 +1,84 @@
+package com.yash.servlet;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.yash.entities.Employee;
+
+/**
+ * Servlet implementation class RetrieveEmployeeByIdServletClass
+ */
+@WebServlet(name = "RetrieveEmployeeByIdServlet", urlPatterns = { "/retrieveemployeebyidservlet" })
+public class RetrieveEmployeeByIdServletClass extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public RetrieveEmployeeByIdServletClass() {
+        super();
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/angularTest","root","root");
+			
+			int empId=Integer.parseInt(request.getParameter("empId"));
+			PreparedStatement statement=connection.prepareStatement("select * from EMP where emp_id=?");
+			statement.setInt(1,empId);
+			ResultSet resultSet=statement.executeQuery();
+			Employee employee=new Employee();
+            List<Employee> empList=new ArrayList<Employee>();
+			while(resultSet.next()){
+				employee.setEmpId(resultSet.getInt("emp_id"));
+				employee.setEmpName(resultSet.getString("emp_name"));
+				employee.setEmpSalary(resultSet.getDouble("emp_salary"));
+				employee.setEmpDesignation(resultSet.getString("emp_designation"));
+				empList.add(employee);
+			}
+			
+			response.setContentType("application/json");
+			
+			String data=JSONObject.valueToString(empList);
+			ServletOutputStream sos=response.getOutputStream();
+			sos.write(data.getBytes());
+			
+			
+			
+			
+		} catch (SQLException | JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+	
+	
+	}
+
+}

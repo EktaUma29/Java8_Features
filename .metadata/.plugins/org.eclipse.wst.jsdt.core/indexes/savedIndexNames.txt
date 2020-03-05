@@ -1,17 +1,8 @@
-INDEX VERSION 1.3+D:\Java Eclipse\Eclispe-OxygenVersion-Workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-4223541335.index
-1508814116.index
-2731511584.index
-2142113808.index
-3602773495.index
-3308384377.index
-2605817437.index
-2741010517.index
-1255279620.index
-106081704.index
-128999305.index
-2730531055.index
-4256351499.index
-3858320642.index
-2216138308.index
-2390662142.index
+INDEX VERSION 1.4+D:\Java Eclipse\sts-workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2559102679.index
+3353011231.index
+1299098289.index
+872083636.index
+1817562688.index
+457919309.index
+3812061.index
